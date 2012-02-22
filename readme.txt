@@ -43,3 +43,16 @@ JNDI Name: jms/drqFactory
 Pool Name: jms/drqFactoryPool
 
 4. Перейти на вкладку Applications, выбрать опцию Deploy..
+Из списка файлов надо выбрать 1 файл: WeatherEJBWebService\WeatherEJBWebService-ejb\dist\WeatherEJBWebService-ejb.jar 
+Нажать ок - приложение должно задеплоиться на сервер. После чего оно появится в списке среди Deployed Applications на вкладке Applications с именем WeatherEJBWebService-ejb
+
+
+Для проверки веб методов можно использовать средства самого Application Servera Glassfish.
+Для этого нужно перейти по ссылке, кликнут на задеплоенное приложение. Откроется список компонентов приложения.
+Рядом с компонентом WeatherWebService в колонке Action надо кликнуть по ссылке View Endpoint.
+После перехода кликнуть по ссылке Tester. На следующей странице выбрать вариант тестирования для http.
+На следующей странице появятся 2 метода веб сервиса. 
+
+Что это за методы - в описании работы самого веб сервиса.
+
+
