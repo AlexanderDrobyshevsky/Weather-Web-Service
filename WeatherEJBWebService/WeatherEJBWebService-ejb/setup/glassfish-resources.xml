@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <admin-object-resource enabled="true" jndi-name="jms/drweather"  res-type="javax.jms.Queue"  res-adapter="jmsra">
+        <property name="Name" value="PhysicalQueue"/>
+    </admin-object-resource>
+    <connector-connection-pool name="jms/drweatherFactoryPool"  connection-definition-name="javax.jms.QueueConnectionFactory"  resource-adapter-name="jmsra"/>
+    <connector-resource enabled="true" jndi-name="jms/drweatherFactory" pool-name="jms/drweatherFactoryPool"  />
+    <admin-object-resource enabled="true" jndi-name="jms/drq"  res-type="javax.jms.Queue"  res-adapter="jmsra">
+        <property name="Name" value="PhysicalQueue"/>
+    </admin-object-resource>
+    <connector-connection-pool name="jms/drqFactoryPool"  connection-definition-name="javax.jms.QueueConnectionFactory"  resource-adapter-name="jmsra"/>
+    <connector-resource enabled="true" jndi-name="jms/drqFactory" pool-name="jms/drqFactoryPool"  />
+</resources>
